@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --ink: #173126;
+  --muted: #6c7b72;
+  --green: #237348;
+  --green-dark: #185838;
+  --canvas: #f5f7f2;
+  --line: #e0e8df;
+}
+
+* { box-sizing: border-box; }
+html { background: var(--canvas); }
+body { margin: 0; color: var(--ink); background: var(--canvas); font-family: Arial, "Noto Sans Devanagari", "Nirmala UI", sans-serif; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+
+.panel { background: #fff; border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 4px 18px rgba(21, 54, 36, .035); }
+.field { width: 100%; min-height: 48px; border: 1px solid #d9e3da; border-radius: 10px; background: #fff; padding: 11px 13px; color: var(--ink); outline: none; }
+.field:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(35,115,72,.10); }
+.btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 11px; background: var(--green); color: #fff; padding: 12px 18px; font-weight: 700; transition: background .15s ease; }
+.btn-primary:hover { background: var(--green-dark); }
+.btn-primary:disabled { opacity: .55; cursor: not-allowed; }
+.btn-secondary { display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: var(--ink); padding: 10px 14px; font-weight: 600; }
+.label { display: block; margin-bottom: 7px; color: #42554a; font-size: 14px; font-weight: 650; }
+.muted { color: var(--muted); }
+.stat-value { font-size: 28px; line-height: 1.1; font-weight: 800; letter-spacing: -.04em; }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 860px; }
+th { text-align: left; font-size: 12px; letter-spacing: .02em; color: #63746a; font-weight: 700; background: #f8faf7; padding: 12px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+td { padding: 12px 10px; border-bottom: 1px solid #edf1ec; vertical-align: top; font-size: 13px; }
+select.field { padding-right: 32px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
